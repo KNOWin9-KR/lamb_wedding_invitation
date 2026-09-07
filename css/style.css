@@ -1,0 +1,882 @@
+/* ========================================
+   기본 설정
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Serif KR", serif;
+    line-height: 1.8;
+    color: #3d3c38;
+    background-color: #faf9f5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ========================================
+   공통 레이아웃
+   ======================================== */
+
+section {
+    padding: 100px 24px;
+}
+
+.section-inner {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 12px;
+
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+
+    color: #b49762;
+}
+
+.section-heading h2 {
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+
+    color: #3d3c38;
+}
+
+
+/* ========================================
+   HERO
+   ======================================== */
+
+#hero {
+    padding: 0;
+    background-color: #f5f2e9;
+}
+
+#hero img {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   INVITATION
+   ======================================== */
+
+#invitation {
+    position: relative;
+
+    background-color: #faf9f5;
+
+    text-align: center;
+}
+
+/* 위쪽 장식 */
+
+#invitation::before {
+    content: "✦";
+
+    display: block;
+
+    margin-bottom: 36px;
+
+    font-size: 12px;
+
+    color: #b49762;
+}
+
+/* 아래쪽 장식 */
+
+#invitation::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    margin: 55px auto 0;
+
+    background-color: #cdb98d;
+}
+
+#invitation .section-heading {
+    margin-bottom: 45px;
+}
+
+.invitation-text {
+    max-width: 470px;
+    margin: 0 auto;
+
+    font-size: 15px;
+    line-height: 2.3;
+    letter-spacing: 0.01em;
+}
+
+.invitation-text p {
+    margin-bottom: 32px;
+}
+
+.invitation-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* 마지막 초대 문구 */
+
+.invitation-highlight {
+    margin-top: 36px;
+
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 2;
+
+    color: #a98b52;
+}
+
+
+/* ========================================
+   신랑 · 신부
+   ======================================== */
+
+.couple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    margin: 48px 0;
+}
+
+.couple-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.couple-item span {
+    font-size: 12px;
+    color: #a98b52;
+}
+
+.couple-item strong {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3d3c38;
+}
+
+.couple-divider {
+    font-family: serif;
+    font-size: 18px;
+    color: #cdb98d;
+}
+
+
+/* ========================================
+   WEDDING DAY
+   ======================================== */
+
+#wedding-day {
+    padding: 100px 24px;
+    background-color: #faf9f5;
+    text-align: center;
+}
+
+.calendar {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 24px;
+}
+
+.calendar-header span {
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    color: #a98b52;
+}
+
+.calendar-header strong {
+    font-size: 13px;
+    font-weight: 400;
+    color: #99958c;
+}
+
+.calendar-week,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-week span {
+    padding: 8px 0;
+
+    font-size: 11px;
+    color: #aaa59b;
+}
+
+.calendar-days span {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 42px;
+
+    font-size: 13px;
+    color: #5a574f;
+}
+
+.calendar-days .wedding-day {
+    isolation: isolate;
+
+    color: #fff;
+    font-weight: 500;
+}
+
+.calendar-days .wedding-day::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-color: #a98b52;
+}
+
+.wedding-date {
+    margin: 28px 0 0;
+
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: #99958c;
+}
+
+
+/* ========================================
+   PROGRAM
+   ======================================== */
+
+#program {
+    background-color: #f3f0e7;
+}
+
+#program .section-heading {
+    margin-bottom: 48px;
+}
+
+.program-list {
+    width: 100%;
+}
+
+/* 프로그램 한 항목 */
+
+.program-item {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 26px 4px;
+
+    border-bottom: 1px solid #ddd7c9;
+}
+
+.program-item:first-child {
+    border-top: 1px solid #ddd7c9;
+}
+
+/* 시간 */
+
+.program-item time {
+    flex: 0 0 62px;
+
+    padding-top: 2px;
+
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+
+    color: #a98b52;
+}
+
+/* 프로그램 내용 */
+
+.program-content {
+    flex: 1;
+}
+
+.program-content h3 {
+    margin-bottom: 6px;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+
+    color: #3d3c38;
+}
+
+.program-content p {
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: #77756d;
+}
+
+
+/* ========================================
+   LOCATION / INFORMATION
+   ======================================== */
+
+#information {
+    background-color: #faf9f5;
+}
+
+.event-info {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.info-item {
+    padding: 27px 0;
+
+    text-align: center;
+
+    border-bottom: 1px solid #e1ded5;
+}
+
+.info-item:first-child {
+    padding-top: 0;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+
+    color: #b49762;
+}
+
+.info-item span {
+    font-size: 15px;
+
+    color: #3d3c38;
+}
+
+
+/* ========================================
+   지도 영역
+   ======================================== */
+
+.info-map {
+    margin-top: 40px;
+}
+
+.map-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.map-button {
+    flex: 1;
+
+    padding: 12px 0;
+
+    border: 1px solid #d6ccb7;
+    background-color: #faf9f5;
+    color: #5a574f;
+
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+
+    transition: background-color 0.2s ease;
+}
+
+.map-button:hover {
+    background-color: #f3f0e7;
+}
+
+
+/* ========================================
+   지도 카드
+   ======================================== */
+
+.map-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 220px;
+
+    background-color: #f3f0e7;
+    text-align: center;
+}
+
+.map-card-content span {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #a98b52;
+}
+
+.map-card-content strong {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #3d3c38;
+}
+
+.map-card-content p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.6;
+    color: #66635c;
+}
+
+
+/* ========================================
+   찾아오시는 길
+   ======================================== */
+
+.transport-info {
+    margin-top: 48px;
+    padding-top: 32px;
+
+    border-top: 1px solid #ddd8ca;
+}
+
+.transport-info h3 {
+    margin: 0 0 24px;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    color: #3d3c38;
+}
+
+.transport-item {
+    margin-bottom: 20px;
+}
+
+.transport-item:last-child {
+    margin-bottom: 0;
+}
+
+.transport-item strong {
+    display: block;
+    margin-bottom: 6px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #a98b52;
+}
+
+.transport-item p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #66635c;
+}
+
+
+/* ========================================
+   CLOSING
+   ======================================== */
+
+#closing {
+    padding: 100px 24px;
+
+    text-align: center;
+
+    background-color: #f3f0e7;
+}
+
+.closing-message {
+    margin: 0 0 32px;
+
+    font-size: 17px;
+    line-height: 2;
+
+    color: #5a574f;
+}
+
+.closing-highlight {
+    margin: 0;
+
+    font-size: 21px;
+    line-height: 1.8;
+
+    color: #a98b52;
+}
+
+
+/* ========================================
+   맨 위로 이동 버튼
+   ======================================== */
+
+#top-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid #cdb98d;
+    border-radius: 50%;
+
+    background-color: rgba(250, 249, 245, 0.9);
+
+    color: #a98b52;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+}
+
+#top-button.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#top-button:hover {
+    background-color: #f3f0e7;
+}
+
+
+/* ========================================
+   스크롤 등장 애니메이션
+   ======================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 모션을 원하지 않는 사용자를 위한 설정 */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    padding: 55px 24px;
+
+    text-align: center;
+
+    font-family: sans-serif;
+    font-size: 10px;
+    line-height: 2;
+
+    letter-spacing: 0.08em;
+
+    color: #96938a;
+    background-color: #eeece4;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 480px) {
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .section-label {
+        font-size: 9px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .invitation-text {
+        font-size: 14px;
+        line-height: 2.25;
+    }
+
+    .invitation-text p {
+        margin-bottom: 28px;
+    }
+
+    .invitation-highlight {
+        margin-top: 42px;
+        font-size: 16px;
+    }
+
+    .program-item {
+        padding: 23px 0;
+    }
+
+    .program-item time {
+        flex-basis: 55px;
+        font-size: 10px;
+    }
+
+    .program-content h3 {
+        font-size: 14px;
+    }
+
+    .program-content p {
+        font-size: 11px;
+    }
+
+    .info-item {
+        padding: 24px 0;
+    }
+}
+
+/* 태블릿 */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    section {
+        padding: 110px 32px;
+    }
+
+    .section-heading {
+        margin-bottom: 60px;
+    }
+
+    .section-label {
+        font-size: 11px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .invitation-text {
+        font-size: 16px;
+        line-height: 2.35;
+    }
+
+    .invitation-highlight {
+        font-size: 18px;
+    }
+
+    .program-item {
+        padding: 28px 4px;
+    }
+
+    .program-item time {
+        flex-basis: 68px;
+        font-size: 12px;
+    }
+
+    .program-content h3 {
+        font-size: 16px;
+    }
+
+    .program-content p {
+        font-size: 13px;
+    }
+
+    .info-item strong {
+        font-size: 11px;
+    }
+
+    .info-item span {
+        font-size: 16px;
+    }
+
+    .transport-info h3 {
+        font-size: 18px;
+    }
+
+    .transport-item strong {
+        font-size: 14px;
+    }
+
+    .transport-item p {
+        font-size: 15px;
+    }
+
+    .closing-message {
+        font-size: 18px;
+    }
+
+    .closing-highlight {
+        font-size: 22px;
+    }
+}
+
+/* PC */
+
+@media (min-width: 1025px) {
+
+    section {
+        padding: 120px 40px;
+    }
+
+    .section-inner {
+        max-width: 620px;
+    }
+
+    .section-heading {
+        margin-bottom: 65px;
+    }
+
+    .section-label {
+        font-size: 11px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .invitation-text {
+        max-width: 500px;
+        font-size: 17px;
+        line-height: 2.4;
+    }
+
+    .invitation-text p {
+        margin-bottom: 36px;
+    }
+
+    .invitation-highlight {
+        margin-top: 42px;
+        font-size: 19px;
+    }
+
+    .program-item {
+        padding: 30px 4px;
+    }
+
+    .program-item time {
+        flex-basis: 72px;
+        font-size: 12px;
+    }
+
+    .program-content h3 {
+        font-size: 17px;
+    }
+
+    .program-content p {
+        font-size: 14px;
+    }
+
+    .info-item {
+        padding: 30px 0;
+    }
+
+    .info-item strong {
+        font-size: 11px;
+    }
+
+    .info-item span {
+        font-size: 17px;
+    }
+
+    .transport-info h3 {
+        font-size: 19px;
+    }
+
+    .transport-item strong {
+        font-size: 14px;
+    }
+
+    .transport-item p {
+        font-size: 15px;
+    }
+
+    .closing-message {
+        font-size: 19px;
+    }
+
+    .closing-highlight {
+        font-size: 23px;
+    }
+
+    .calendar {
+        max-width: 340px;
+    }
+}
