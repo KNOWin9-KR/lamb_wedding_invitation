@@ -606,6 +606,40 @@ section {
     background-color: #f3f0e7;
 }
 
+/* ========================================
+   SHARE
+   ======================================== */
+
+#share {
+    padding: 0 24px 80px;
+    background-color: #f3f0e7;
+    text-align: center;
+}
+
+#share-button {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 20px;
+
+    border: 1px solid #b49762;
+    background-color: transparent;
+
+    color: #a98b52;
+    font-family: "Noto Serif KR", serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+#share-button:hover {
+    background-color: #a98b52;
+    color: #fff;
+}
 
 /* ========================================
    스크롤 등장 애니메이션
@@ -878,5 +912,11 @@ footer {
 
     .calendar {
         max-width: 340px;
+    }
+
+    #share-button {
+        max-width: 360px;
+        padding: 15px 20px;
+        font-size: 15px;
     }
 }
